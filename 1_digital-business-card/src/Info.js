@@ -5,13 +5,17 @@ import linkedin_icon from './img/linkedin.svg'
 
 export default function Info() {
 	return (
-		<div>
+		<div className='info'>
 			<img src={Laura} alt='Laura Smith'/>
-			<h2>Laura Smith</h2>
-			<h5>Frontend Developer</h5>
-			<h6>laurasmith.website</h6>
-			<button><img src={email_icon} alt='E-mail icon'/>Email</button>
-			<button><img src={linkedin_icon} alt='Linkedin icon'/>Linkedin</button>
+			<h2 className='info--name'>Laura Smith</h2>
+			<h5 className='info--job'>Frontend Developer</h5>
+			<h6 className='info--site'>laurasmith.website</h6>
+			<button className='info--button' id='mail-button'>
+				<img src={email_icon} alt='E-mail icon' className='info--button-icon'/>Email
+			</button>
+			<button className='info--button' id='linkedin-button'>
+				<img src={linkedin_icon} alt='Linkedin icon' className='info--button-icon'/>Linkedin
+			</button>
 		</div>
 	);
 }

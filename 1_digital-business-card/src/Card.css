@@ -1,11 +1,92 @@
 body {
 	background-color: #23252C;
+	font-family: 'Inter', sans-serif;
 }
 
 .Card {
+	position: relative;
 	margin: 85px auto;
 	width: 317px;
 	height: 780px;
 	background-color: #1A1B21;
 	border-radius: 10px;
+}
+
+.info {
+	text-align: center;
+}
+
+.info--name {
+	color: white;
+	margin-bottom: 2px;
+	font-weight: 700;
+}
+
+.info--job {
+	color: #F3BF99;
+	font-weight: 400;
+	margin: 0;
+}
+
+.info--site {
+	color: #F5F5F5;
+	font-weight: 400;
+	margin: 9px 0px 15px;
+}
+
+.info--button {
+	width: 115px;
+	height: 34px;
+	border: none;
+	border-radius: 6px;
+	margin: 0px 8px 15px 8px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#mail-button {
+	background: #D1D5DB;
+}
+
+#linkedin-button {
+	color: white;
+	background: #5093E2;
+}
+
+.info--button-icon {
+	margin-right: 8px;
+	width: 13px;
+	height: 13px;
+}
+
+section {
+	color: #DCDCDC;
+	padding: 0px 35px;
+}
+
+.section--title {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+.section--content {
+	font-size: 10.25px;
+	margin: 0px;
+	line-height: 150%;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	width: 317px;
+	height: 64px;
+	background-color: #161619;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.footer--icon {
+	margin: 0 12px;
 }

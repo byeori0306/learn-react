@@ -7,10 +7,10 @@ import github_icon from './img/github.svg'
 export default function Footer() {
 	return (
 		<footer>
-			<img src={twitter_icon} alt='Twitter icon'/>
-			<img src={facebook_icon} alt='Facebook icon'/>
-			<img src={instagram_icon} alt='Instagram icon'/>
-			<img src={github_icon} alt='Github icon'/>
+			<img src={twitter_icon} alt='Twitter icon' className='footer--icon'/>
+			<img src={facebook_icon} alt='Facebook icon' className='footer--icon'/>
+			<img src={instagram_icon} alt='Instagram icon' className='footer--icon'/>
+			<img src={github_icon} alt='Github icon' className='footer--icon'/>
 		</footer>
 	);
 }
