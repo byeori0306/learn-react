@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+	font-family: 'Inter' sans-serif;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 55px;
+	background: #F55A5A;
+	padding: 15px;
+}
+
+.header--logo {
+	height: 100%;
+	margin-right: 7px;
+}
+
+.header--title {
+	color: white;
+	font-weight: 400;
+}
