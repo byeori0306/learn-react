@@ -25,3 +25,77 @@ header {
 	color: white;
 	font-weight: 400;
 }
+
+main {
+	max-width: 600px;
+	margin: 35px auto;
+}
+
+.card {
+	display: flex;
+	gap: 20px;
+}
+
+.card--image {
+	height: 200px;
+	border-radius: 10px;
+}
+
+.card--desc {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.card--location {
+	display: flex;
+	align-items: center;
+	height: 30px;
+}
+
+.card--icon {
+	height: 12px;
+	margin-right: 5px;
+}
+
+.card--country {
+	font-size: 12px;
+	letter-spacing: 0.17em;
+	font-weight: 400;
+	color: #2B283A;
+	margin-right: 12px;
+}
+
+.card--url {
+	color: #918E9B;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+.card--place {
+	color: #2B283A;
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 0;
+}
+
+.card--date {
+	color: #2B283A;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.card--content {
+	color: #2B283A;
+	font-size: 12px;
+}
+
+main > div > hr {
+	border: 1px solid #F5F5F5;
+	margin: 18px 0 18px 0;
+}
+
+main > div:last-child > hr {
+	border : none;
+}
