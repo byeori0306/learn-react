@@ -16,7 +16,8 @@ function Quiz(props) {
 		for (let i = 0; i < givenChoices.length; i++) {
 			shuffledChoices.push({
 				value: givenChoices[i],
-				isHeld: false
+				isHeld: false,
+				isAnswer: givenChoices[i] === props.answer? true : false
 			})
 		}
 		return shuffledChoices;
@@ -39,6 +40,7 @@ function Quiz(props) {
 					return  <Choice 
 								key={idx}
 								choice={choice}
+								gameover={props.gameover}
 								chooseChoice={chooseChoice}
 							/>
 				})}
