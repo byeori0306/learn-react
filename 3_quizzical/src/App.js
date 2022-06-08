@@ -12,7 +12,7 @@ function App() {
 
 	return (
 		<div className="App">
-			{isStarting? <Quizzical /> : <Start startGame={startGame}/>}
+			{isStarting? <Quizzical startGame={startGame}/> : <Start startGame={startGame}/>}
 		</div>
 	);
 }

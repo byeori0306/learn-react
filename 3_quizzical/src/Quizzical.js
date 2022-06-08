@@ -1,7 +1,7 @@
 import React from 'react'
 import Quiz from './Quiz'
 
-function Quizzical() {
+function Quizzical(props) {
 	const [quizes, setQuizes] = React.useState([])
 	const [gameover, setGameover] = React.useState(false);
 	const [correctAnswers, setCorrectAnswers] = React.useState(0);
@@ -12,10 +12,17 @@ function Quizzical() {
 			.then(data => setQuizes([...data.results]))
 	}, [])
 
+	function increaseCount() {
+		setCorrectAnswers(prev => prev + 1)
+	}
+
+	function decreaseCount() {
+		setCorrectAnswers(prev => prev - 1)
+	}
+
 	const button = gameover?
 					<div>
 						<h3>{`You scored ${correctAnswers}/5 correct answers!`}</h3>
-						<button>Play again</button>
 					</div>
 					: <button onClick={() => setGameover(true)}>Check answers</button>
 
@@ -28,6 +35,8 @@ function Quizzical() {
 					answer={quiz.correct_answer} 
 					traps={quiz.incorrect_answers}
 					gameover={gameover}
+					increaseCount={increaseCount}
+					decreaseCount={decreaseCount}
 				/>
 			)}
 			{button}

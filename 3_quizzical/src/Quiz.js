@@ -3,6 +3,7 @@ import Choice from './Choice'
 
 function Quiz(props) {
 	const [choices, setChoices] = React.useState(shuffleChoices());
+	const [isCorrect, setIsCorrect] = React.useState(false);
 
 	function shuffleChoices() {
 		const givenChoices = [props.answer, ...props.traps];
@@ -30,6 +31,14 @@ function Quiz(props) {
 			else
 				return {...choice, isHeld: false}
 		}))
+
+		if (!isCorrect && e.target.name === props.answer) {
+			setIsCorrect(true)
+			props.increaseCount()
+		} else if (isCorrect && e.target.name !== props.answer) {
+			setIsCorrect(false)
+			props.decreaseCount()
+		}
 	}
 
 	return (

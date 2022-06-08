@@ -7,8 +7,6 @@ function Choice(props) {
 
 	function ending() {
 		let color
-
-		console.log(props.choice.answer)
 		if (props.choice.isAnswer)
 			color = "#94D7A2"
 		else if (props.choice.isHeld && !props.choice.isAnswer)
