@@ -2,16 +2,28 @@ import React from 'react';
 
 function Choice(props) {
 	const holding = {
-		backgroundColor: props.choice.isHeld? "#D6DBF5" : "#F5F7FB"
+		backgroundColor: props.choice.isHeld? "#D6DBF5" : "#F5F7FB",
+		borderColor: props.choice.isHeld? "#D6DBF5" : "#293264"
 	}
 
 	function ending() {
-		let color
 		if (props.choice.isAnswer)
-			color = "#94D7A2"
+			return {
+				backgroundColor: "#94D7A2",
+				border: "none"
+			}
 		else if (props.choice.isHeld && !props.choice.isAnswer)
-			color = "#F8BCBC"
-		return {backgroundColor: color}
+			return {
+				backgroundColor: "#FFD3D9",
+				border: "none",
+				color: "#bbb",
+				cursor: "default"
+			}
+		else
+			return {
+				color: "#bbb",
+				cursor: "default"
+			}
 	}
 
 	return (

@@ -7,7 +7,7 @@ function Quizzical(props) {
 	const [correctAnswers, setCorrectAnswers] = React.useState(0);
 
 	React.useEffect(() => {
-		fetch('https://opentdb.com/api.php?amount=5&category=9&type=multiple')
+		fetch('https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple')
 			.then(res => res.json())
 			.then(data => setQuizes([...data.results]))
 	}, [])
@@ -21,13 +21,11 @@ function Quizzical(props) {
 	}
 
 	const button = gameover?
-					<div>
-						<h3>{`You scored ${correctAnswers}/5 correct answers!`}</h3>
-					</div>
+					<h3 className="board">{`You scored ${correctAnswers}/5 correct answers!`}</h3>
 					: <button onClick={() => setGameover(true)}>Check answers</button>
 
 	return (
-		<div className="container">
+		<div className="quizzical">
 			{quizes.map((quiz, idx) =>
 				<Quiz 
 					key={idx}

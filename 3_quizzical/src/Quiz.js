@@ -54,6 +54,7 @@ function Quiz(props) {
 							/>
 				})}
 			</div>
+			<hr/>
 		</div>
 	)
 }
