@@ -1,4 +1,5 @@
 import React from 'react'
+import DOMpurify from 'dompurify'
 import Choice from './Choice'
 
 function Quiz(props) {
@@ -43,7 +44,7 @@ function Quiz(props) {
 
 	return (
 		<div className="quiz">
-			<h4>{props.question}</h4>
+			<h4 dangerouslySetInnerHTML={{ __html: DOMpurify.sanitize(props.question) }} />
 			<div className="choices">
 				{choices.map((choice, idx) => {
 					return  <Choice 

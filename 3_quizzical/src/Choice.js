@@ -1,4 +1,5 @@
 import React from 'react';
+import DOMpurify from 'dompurify';
 
 function Choice(props) {
 	const holding = {
@@ -33,9 +34,8 @@ function Choice(props) {
 			name={props.choice.value}
 			disabled={props.gameover? true : false}
 			onClick={(e) => props.chooseChoice(e)}
-		>
-			{props.choice.value}
-		</button>
+			dangerouslySetInnerHTML={{ __html: DOMpurify.sanitize(props.choice.value) }}
+		/>
 	);
 }
 
